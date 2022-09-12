@@ -13,9 +13,24 @@ int[] GetArray(){
     return result;
 }
 void PrintArray(int[]arr) {
-    for(int i = 0; i < arr.Length; i++)
+    
+    for(int i = 0; i <= 7; i++)
     {
-    System.Console.Write(arr[i]);
+        switch (i){
+            case 0:
+                System.Console.Write($"[{arr[i]}, ");
+            break;
+
+            case 7:
+                System.Console.Write($"{arr[i]}]");
+            break;
+
+            default:
+                System.Console.Write($"{arr[i]}, ");
+            break;
+
+        //System.Console.Write(arr[i]);
+        }
     }
 }
 PrintArray(GetArray());
